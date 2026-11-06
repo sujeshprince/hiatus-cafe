@@ -1,0 +1,35 @@
+@keyframes dialog-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes dialog-rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.985);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.dialog-overlay[data-state="open"] {
+  animation: dialog-fade-in 240ms ease both;
+}
+
+.dialog-overlay[data-state="closed"] {
+  animation: dialog-fade-in 180ms ease both reverse;
+}
+
+.dialog-content[data-state="open"] {
+  animation: dialog-rise-in 380ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.dialog-content[data-state="closed"] {
+  animation: dialog-fade-in 160ms ease both reverse;
+}
