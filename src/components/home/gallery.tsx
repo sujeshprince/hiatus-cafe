@@ -6,6 +6,7 @@ import { ArrowLeft, ArrowRight, Expand, X } from "lucide-react";
 import { InstagramIcon } from "@/components/ui/social-icons";
 import { galleryImages } from "@/data/gallery";
 import { instagramHref } from "@/lib/links";
+import { assetPath } from "@/lib/asset";
 import { cn } from "@/lib/utils";
 import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 import { SectionKicker } from "@/components/ui/section-kicker";
@@ -78,7 +79,7 @@ export function Gallery() {
               >
                 <div className={cn("relative w-full", ratioClasses[item.ratio])}>
                   <Image
-                    src={item.src}
+                    src={assetPath(item.src)}
                     alt={item.alt}
                     fill
                     sizes="(max-width: 640px) 92vw, (max-width: 1024px) 46vw, 31vw"
@@ -172,7 +173,7 @@ export function Gallery() {
                 className="image-fade-in relative h-full w-full"
               >
                 <Image
-                  src={image.src}
+                  src={assetPath(image.src)}
                   alt={image.alt}
                   fill
                   sizes="(max-width: 768px) 100vw, 85vw"

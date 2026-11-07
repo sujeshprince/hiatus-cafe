@@ -4,6 +4,12 @@ A cinematic single-page website for **Hiatus Cafe (हिट्स कैफे)
 
 The site is intentionally **frontend-only**. There is no booking backend, database, authentication or payment flow. Reservations are validated in the browser and handed off to a real conversation on WhatsApp or a phone call.
 
+## Live preview
+
+**https://sujeshprince.github.io/hiatus-cafe/**
+
+The GitHub Pages build is deployed automatically from `main` through `.github/workflows/deploy-pages.yml`. It uses a `/hiatus-cafe` base path; normal root-domain deployments are unaffected.
+
 ## Stack
 
 - Next.js 16.4 (App Router) + React 19 + TypeScript

@@ -9,6 +9,7 @@ import {
   VolumeX,
 } from "lucide-react";
 import { features, type Feature } from "@/data/features";
+import { assetPath } from "@/lib/asset";
 import { Reveal } from "@/components/ui/reveal";
 import { SectionKicker } from "@/components/ui/section-kicker";
 import { PauseMark } from "@/components/ui/brand-mark";
@@ -78,7 +79,7 @@ export function WhyHiatus() {
             <div className="lg:sticky lg:top-28">
               <div className="image-zoom relative aspect-[4/5] overflow-hidden bg-olive-deep">
                 <Image
-                  src="/images/gallery/gallery-06.jpg"
+                  src={assetPath("/images/gallery/gallery-06.jpg")}
                   alt="A quiet café corner with tables beside a large window"
                   fill
                   sizes="(max-width: 1024px) 90vw, 30vw"

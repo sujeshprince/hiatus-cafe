@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { siteConfig } from "@/config/site";
+import { assetPath } from "@/lib/asset";
 import { Reveal } from "@/components/ui/reveal";
 import { SectionKicker } from "@/components/ui/section-kicker";
 import { PauseMark } from "@/components/ui/brand-mark";
@@ -87,7 +88,7 @@ export function Story() {
               <Reveal className="col-span-8" y={36}>
                 <div className="arch-frame image-zoom relative aspect-[4/5] overflow-hidden bg-sand">
                   <Image
-                    src="/images/story/story-main.jpg"
+                    src={assetPath("/images/story/story-main.jpg")}
                     alt="A warm, rustic café interior with wooden tables and soft lighting"
                     fill
                     sizes="(max-width: 1024px) 70vw, 42vw"
@@ -100,7 +101,7 @@ export function Story() {
               <Reveal className="col-span-4 pb-8 sm:pb-12" delay={0.12} y={36}>
                 <div className="image-zoom relative aspect-[3/4] overflow-hidden bg-sand">
                   <Image
-                    src="/images/story/story-barista.jpg"
+                    src={assetPath("/images/story/story-barista.jpg")}
                     alt="A barista pouring steamed milk into a cup to create latte art"
                     fill
                     sizes="(max-width: 1024px) 30vw, 18vw"

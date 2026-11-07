@@ -9,6 +9,7 @@ import {
   type MenuCategory,
 } from "@/data/menu";
 import { cn } from "@/lib/utils";
+import { assetPath } from "@/lib/asset";
 import { ButtonLink } from "@/components/ui/button";
 import { SectionKicker } from "@/components/ui/section-kicker";
 import { Reveal } from "@/components/ui/reveal";
@@ -130,7 +131,7 @@ export function MenuSection() {
                   className="image-fade-in absolute inset-0"
                 >
                   <Image
-                    src={active.image}
+                    src={assetPath(active.image)}
                     alt={active.imageAlt}
                     fill
                     sizes="(max-width: 1024px) 90vw, 38vw"

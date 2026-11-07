@@ -84,7 +84,7 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: "/icon.svg",
+    icon: `${siteConfig.siteUrl}/icon.svg`,
   },
   formatDetection: {
     telephone: true,

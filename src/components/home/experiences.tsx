@@ -5,6 +5,7 @@ import { SectionKicker } from "@/components/ui/section-kicker";
 import { ExperienceCta } from "@/components/home/experience-cta";
 import { PauseMark } from "@/components/ui/brand-mark";
 import { cn } from "@/lib/utils";
+import { assetPath } from "@/lib/asset";
 
 const toneClasses = {
   caramel: {
@@ -86,7 +87,7 @@ export function Experiences() {
                     )}
                   >
                     <Image
-                      src={experience.image}
+                      src={assetPath(experience.image)}
                       alt={experience.imageAlt}
                       fill
                       sizes="(max-width: 1024px) 100vw, 58vw"

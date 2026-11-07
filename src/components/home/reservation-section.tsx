@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Clock, Phone } from "lucide-react";
 import { siteConfig } from "@/config/site";
 import { telHref } from "@/lib/links";
+import { assetPath } from "@/lib/asset";
 import { Reveal } from "@/components/ui/reveal";
 import { SectionKicker } from "@/components/ui/section-kicker";
 import { PauseMark } from "@/components/ui/brand-mark";
@@ -45,7 +46,7 @@ export function ReservationSection() {
             <div className="lg:sticky lg:top-28">
               <div className="arch-frame relative aspect-[4/5] overflow-hidden bg-sand">
                 <Image
-                  src="/images/reserve/reserve-table.jpg"
+                  src={assetPath("/images/reserve/reserve-table.jpg")}
                   alt="A cosy café interior with wooden tables, plants and large windows"
                   fill
                   sizes="(max-width: 1024px) 92vw, 38vw"

@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowDown, ArrowUpRight, MapPin, Clock } from "lucide-react";
 import { siteConfig } from "@/config/site";
+import { assetPath } from "@/lib/asset";
 import { ButtonLink } from "@/components/ui/button";
 import { PauseMark } from "@/components/ui/brand-mark";
 
@@ -40,7 +41,7 @@ export function Hero() {
     >
       <div aria-hidden="true" className="absolute inset-0">
         <Image
-          src="/images/hero/hero-main.jpg"
+          src={assetPath("/images/hero/hero-main.jpg")}
           alt=""
           fill
           priority
